@@ -60,8 +60,8 @@ class RectangleWithArrows(Scene):
         # add arrowheads to show the direction of Rdz
         arrowhead_color = rect_color
         arrowhead_bottom = Arrow(
-            start=bottom_right,
-            end=rectangle.get_bottom() + LEFT,
+            start=rectangle.get_bottom() + LEFT,
+            end=bottom_right - RIGHT,
             buff=0,
             color=arrowhead_color,
             max_stroke_width_to_length_ratio=0,
@@ -81,8 +81,8 @@ class RectangleWithArrows(Scene):
             max_stroke_width_to_length_ratio=0,
         )
         arrowhead_right = Arrow(
-            start=top_right,
-            end=rectangle.get_right() + DOWN,
+            start=rectangle.get_right() + DOWN,
+            end=top_right - UP,
             buff=0,
             color=arrowhead_color,
             max_stroke_width_to_length_ratio=0,
