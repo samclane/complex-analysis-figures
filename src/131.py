@@ -15,5 +15,6 @@ class PrTheta(Scene):
 
         graph = axes.plot(lambda t: pr_theta(0.7, t), x_range=[-PI, PI], color=YELLOW)
         graph_label = MathTex("p(r, \\theta)").next_to(axes.get_y(), UR, buff=1)
-        vgroup = VGroup(axes, graph, graph_label)
+        theta_label = MathTex("\\theta").next_to(axes, DR, buff=0.1)
+        vgroup = VGroup(axes, graph, graph_label, theta_label)
         self.add(vgroup)
